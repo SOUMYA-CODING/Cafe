@@ -1,4 +1,4 @@
-{% extends 'base/base.html' %}
+{% extends "base/base.html" %}
 
 {% load static %}
 
@@ -7,10 +7,15 @@
 <title>Cafe | Home</title>
 {% endblock title %}
 
+<!-- CSS Link -->
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static 'style/style.css' %}">
+{% endblock stylesheet %}
+
 <!-- Content -->
 {% block content %}
 
-<div id="home-page">
+<div class="home-page">
     <!-- Navbar | Header -->
     <div class="home-page-body container">
         <div class="row justify-content-between align-items-center">
@@ -27,6 +32,9 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="banner-page">
 
 </div>
 
