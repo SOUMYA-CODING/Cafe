@@ -51,7 +51,7 @@
 
 .home-page-body {
     color: #111;
-    margin: 7rem 0rem;
+    padding: 6rem 0;
 }
 
 .home-page-body p {
@@ -201,4 +201,10 @@
 .contact-page .text {
     color: #333;
     margin: 1.5rem 0 2rem 0;
+}
+
+.contact-page .form-control {
+    background-color: gray;
+    opacity: 0.4;
+    border-radius: 0;
 }
