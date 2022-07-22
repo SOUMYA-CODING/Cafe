@@ -1,5 +1,9 @@
 from django.contrib import admin
 from . models import FoodCategory
-# Register your models here.
 
-admin.site.register(FoodCategory)
+
+class FoodCategoryAdmin(admin.ModelAdmin):
+    list_display = ('fc_name', 'fc_craeted_at')
+
+
+admin.site.register(FoodCategory, FoodCategoryAdmin)
