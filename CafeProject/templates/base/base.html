@@ -16,36 +16,6 @@
     <!-- Website Logo -->
     <link rel="icon" href="{% static 'assets/logo.png' %}">
 
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-
-            <a class="navbar-brand" href="#"><img src="{% static 'assets/logo.png' %}" alt=""></a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'index_page' %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about_page' %}">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contact_page' %}">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn nav-btn" href="{% url 'login_page' %}">Login</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <!-- CSS Link -->
     {% block stylecss %}
 
@@ -58,6 +28,37 @@
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+
+                <a class="navbar-brand" href="#"><img src="{% static 'assets/logo.png' %}" alt=""></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'index_page' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about_page' %}">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact_page' %}">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn nav-btn" href="{% url 'login_page' %}">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <!-- Main Content Area -->
     {% block content %}
