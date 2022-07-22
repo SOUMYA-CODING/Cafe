@@ -7,12 +7,17 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Common */
+.error_message {
+    color: red;
+    font-size: 12px;
+}
+
 
 /* Home Page */
 .home-page {
     width: 100%;
     height: 100vh;
-    background-color: red;
 }
 
 .navbar-brand img {
@@ -25,7 +30,7 @@
 
 .navbar .nav-item .nav-link {
     text-decoration: none;
-    color: #fff;
+    color: #000;
 }
 
 .navbar .nav-item .nav-btn {
@@ -55,7 +60,7 @@
 }
 
 .home-page-body h1 {
-    font-size: 0rem;
+    font-size: 4rem;
 }
 
 .home-page-body h1 span {
@@ -101,9 +106,99 @@
 /* Banner Page */
 .banner-page {
     width: 100%;
-    height: 100vh;
+    height: auto;
 }
 
 .contact-page-body h1 {
     color: red;
+}
+
+
+/* Contact Page */
+.contact-page {
+    width: 100%;
+    height: 100vh;
+}
+
+.contact-page .map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-page iframe {
+    width: 100%;
+}
+
+.form-page .col {
+    padding: 2rem;
+}
+
+.contact-page .send-btn {
+    text-transform: uppercase;
+    padding: 0.7rem 4rem;
+    color: #fff;
+    background-color: #BA8B02;
+}
+
+.contact-page .send-btn:hover {
+    color: #fff;
+    box-shadow: 0px 0px 8px 0px #BA8B02;
+}
+
+.contact-page .information img {
+    width: 100px;
+}
+
+.information {
+    display: flex;
+    color: #555;
+    margin: 0.7rem 0;
+    align-items: center;
+    font-size: 16px;
+}
+
+.information p {
+    margin: auto 15px;
+}
+
+.icon {
+    color: #111;
+    width: 24px;
+    font-size: 24px;
+}
+
+.social-media {
+    padding: 2rem 0 0 0;
+}
+
+.social-media p {
+    color: #333;
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background: #BA8B02;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 0.5rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.05);
+    color: #fff;
+}
+
+.contact-page .text {
+    color: #333;
+    margin: 1.5rem 0 2rem 0;
 }

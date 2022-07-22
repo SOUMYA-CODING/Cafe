@@ -4,7 +4,7 @@
 
 <!-- Title -->
 {% block title %}
-<title>Cafe | Contact US</title>
+<title>Cafe | Contact</title>
 {% endblock title %}
 
 <!-- CSS Link -->
@@ -16,11 +16,73 @@
 {% block content %}
 
 <div class="contact-page">
-    
     <div class="contact-page-body container">
-        <h1>ads</h1>
+        <div class="row mb-3">
+            <div class="col map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.7815006673222!2d85.80470551920197!3d20.35072113604687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1908e064769e73%3A0x9288172f3a98c7a4!2sSilicon%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1658467283970!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="row form-page mb-5">
+            <div class="col">
+                <div class="info">
+                    <div class="information py-2">
+                        <img src=" {% static 'assets/logo.png' %} " alt="">
+                    </div>
+                    <div class="information">
+                        <i class="icon fa-solid fa-location-dot"></i>
+                        <p>Silicon Institute of Technology,
+                            Silicon Hills, Patia,
+                            Bhubaneswar – 751024
+                            Odisha, India.</p>
+                    </div>
+                    <div class="information">
+                        <i class="icon fa-solid fa-phone"></i>
+                        <p>8249461992</p>
+                    </div>
+                    <div class="social-media">
+                        <p>Connect with me :</p>
+                        <div class="social-icons">
+                            <a href="" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="" target="_blank"><i class="fa-brands fa-google"></i></a>
+                            <a href="" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <form autocomplete="off" id="form" onsubmit="return formvalidation()">
+                    <h3 class="title-2">Contact me</h3>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        <label for="name">Name</label>
+                        <span id="name_error" class="error_message"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        <label for="email">Email address</label>
+                        <span id="email_error" class="error_message"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="tel" class="form-control" id="phone_number" placeholder="name@example.com">
+                        <label for="phone_number">Phone Message</label>
+                        <span id="phone_error" class="error_message"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="message"
+                            style="height: 100px"></textarea>
+                        <label for="message">Comments</label>
+                        <span id="message_error" class="error_message"></span>
+                    </div>
+                    <button class="send-btn btn" id="send_message_btn">
+                        Send &nbsp;<i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
-
 </div>
 
 {% endblock content %}
