@@ -1,15 +1,24 @@
 from django.shortcuts import render
 from . models import FoodCategory
 
+
 # Index Page
-
-
 def index(request):
     food_category = FoodCategory.objects.all()
     context = {
         'food_category': food_category
     }
     return render(request, 'mainpage/index.html', context)
+
+
+# About Us Page
+def about(request):
+    return render(request, 'mainpage/about.html')
+
+
+# Contact Page
+def contact(request):
+    return render(request, 'mainpage/contact.html')
 
 
 # Login Page
