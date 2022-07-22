@@ -113,6 +113,35 @@
     color: red;
 }
 
+/* About Page */
+
+.about-page-body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    flex-direction: column;
+}
+
+.header-text {
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #111;
+    letter-spacing: 1.5px;
+}
+
+.header-text span {
+    width: 500px;
+    position: absolute;
+    color: gray;
+    font-size: 60px;
+    opacity: 0.3;
+}
+
 
 /* Contact Page */
 .contact-page {
