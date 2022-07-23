@@ -1,0 +1,37 @@
+{% extends "base/base.html" %}
+
+{% load static %}
+
+<!-- Title -->
+{% block title %}
+<title>Cafe | Menu</title>
+{% endblock title %}
+
+<!-- CSS Link -->
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static 'style/style.css' %}">
+{% endblock stylesheet %}
+
+
+<!-- Content -->
+{% block content %}
+
+<div class="container">
+    <div class="row p-3">
+        {% for c in foodmenu %}
+        <div class="col m-1">
+            <div class="card m-1" style="width: 18rem;">
+                <img src=" {{c.f_photo.url}} " class="card-img-top" alt="..." style="height: 150px;">
+                <div class="card-body">
+                    <h4 class="card-title">{{c.f_name}}</h4>
+                    <p class="card-text"> &dollar; {{c.f_price}}</p>
+                    <a href="" class="btn btn-primary">Check</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock content %}
