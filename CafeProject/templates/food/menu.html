@@ -19,17 +19,16 @@
 <div class="menu-page-body container">
     <dic class="row">
         <!-- Menu Display -->
-        <div class="col-3 bg-danger p-2">
+        <div class="col-2 p-2">
             <ul class="list-group">
                 {% for food_categorys in food_category %}
-                <li class="list-group-item">{{food_categorys.fc_name}}</li>
+                <li class="list-group-item food-category">{{food_categorys.fc_name}}</li>
                 {% endfor %}
             </ul>
         </div>
 
         <!-- Food Display -->
-        <div class="col  bg-primary p-2">
-
+        <div class="col p-2">
             <div class="row">
                 {% for fooditems in foodmenu %}
                 <div class="col">
