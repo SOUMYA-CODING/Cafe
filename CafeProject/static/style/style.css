@@ -60,7 +60,7 @@
     color: #111;
 }
 
-.home-page-body .row{
+.home-page-body .row {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -247,7 +247,12 @@
 
 
 /* Menu Page */
-.menu-page-body{
+.menu-page-body {
     width: 100%;
     padding-top: 8%;
+}
+
+.food-tem-card {
+    width: 18rem;
+    height: 22rem;
 }
