@@ -4,11 +4,16 @@ from . models import FoodCategory
 
 # Index Page
 def index(request):
+    return render(request, 'mainpage/index.html')
+
+
+# Food Category
+def foodcategory(request):
     food_category = FoodCategory.objects.all()
     context = {
         'food_category': food_category
     }
-    return render(request, 'mainpage/index.html', context)
+    return render(request, 'food/menu.html', context)
 
 
 # About Us Page
