@@ -34,20 +34,33 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="row p-3">
-        {% for c in foodmenu %}
-        <div class="col m-1">
+<div class="banner-page container my-5">
+    <div class="row">
+        <div class="col">
             <div class="card m-1" style="width: 18rem;">
-                <img src=" {{c.f_photo.url}} " class="card-img-top" alt="..." style="height: 150px;">
-                <div class="card-body">
-                    <h4 class="card-title">{{c.f_name}}</h4>
-                    <p class="card-text"> &dollar; {{c.f_price}}</p>
-                    <a href="" class="btn btn-primary">Check</a>
-                </div>
+                <img src=" {% static 'assets/img_1.png' %} " class="card-img-top" alt="...">
             </div>
         </div>
-        {% endfor %}
+        <div class="col">
+            <div class="card m-1" style="width: 18rem;">
+                <img src=" {% static 'assets/img_1.png' %} " class="card-img-top" alt="...">
+            </div>
+        </div>
+        <div class="col">
+            <div class="card m-1" style="width: 18rem;">
+                <img src=" {% static 'assets/img_1.png' %} " class="card-img-top" alt="...">
+            </div>
+        </div>
+        <div class="col">
+            <div class="card m-1" style="width: 18rem;">
+                <img src=" {% static 'assets/img_1.png' %} " class="card-img-top" alt="...">
+            </div>
+        </div>
+        <div class="col">
+            <div class="card m-1" style="width: 18rem;">
+                <img src=" {% static 'assets/img_1.png' %} " class="card-img-top" alt="...">
+            </div>
+        </div>
     </div>
 </div>
 
