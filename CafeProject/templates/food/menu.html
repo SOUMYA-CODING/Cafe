@@ -32,12 +32,15 @@
             <div class="row">
                 {% for fooditems in foodmenu %}
                 <div class="col">
-                    <div class="card food-tem-card">
+                    <div class="card food-item-card">
                         <img src=" {{fooditems.f_photo.url}} " class="card-img-top">
                         <div class="card-body">
                             <h4 class="card-title">{{fooditems.f_name}}</h4>
                             <p class="card-text"> Rs. {{fooditems.f_price}}</p>
-                            <a href="" class="btn btn-primary">Check</a>
+                            <div class="d-flex justify-content-between">
+                                <a href="" id="btn-buy">Buy</a>
+                                <a href="" id="btn-cart">Add to cart</a>
+                            </div>
                         </div>
                     </div>
                 </div>
