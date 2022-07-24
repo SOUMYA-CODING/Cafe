@@ -60,6 +60,13 @@
     color: #111;
 }
 
+.home-page-body .row{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .home-page-body p {
     font-size: 1rem;
     text-transform: uppercase;
@@ -233,4 +240,14 @@
     background-color: gray;
     opacity: 0.4;
     border-radius: 0;
+}
+
+
+
+
+
+/* Menu Page */
+.menu-page-body{
+    width: 100%;
+    padding-top: 8%;
 }
