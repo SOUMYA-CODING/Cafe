@@ -16,7 +16,7 @@
 #btn-buy {
     background-color: #BA8B02;
     color: #fff;
-    padding: 0.7rem 1.2rem;
+    padding: 0.5rem 1.2rem;
     text-decoration: none;
     border: 2px;
 }
@@ -28,7 +28,7 @@
 #btn-cart {
     background-color: #111;
     color: #fff;
-    padding: 0.7rem 1.3rem;
+    padding: 0.5rem 1.3rem;
     text-decoration: none;
     border: 2px;
 }

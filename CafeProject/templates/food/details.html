@@ -1,0 +1,40 @@
+{% extends "base/base.html" %}
+
+{% load static %}
+
+<!-- Title -->
+{% block title %}
+<title>Cafe | Food Details</title>
+{% endblock title %}
+
+<!-- CSS Link -->
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="{% static 'style/style.css' %}">
+{% endblock stylesheet %}
+
+
+<!-- Content -->
+{% block content %}
+
+<div class="menu-page-body container">
+    <div class="row">
+        <div class="col">
+            <img src="{{foods.f_photo.url}}" alt="{{foods.f_name}}" width="250px" class="img-fluid">
+        </div>
+        <div class="col">
+            <h4>{{foods.f_name}}</h4>
+            <h5>Rs. {{foods.f_price}}</h5>
+            <p>{{foods.f_description}}</p>
+            <p>{{foods.f_secondary_description}}</p>
+            <div class="my-2">
+                {% if foods.f_is_available %}
+                <a href="" id="btn-cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                {% else %}
+                <p class="text-danger">Not Availabe</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

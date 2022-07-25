@@ -38,8 +38,8 @@
                             <h4 class="card-title">{{fooditems.f_name}}</h4>
                             <p class="card-text"> Rs. {{fooditems.f_price}}</p>
                             <div class="d-flex justify-content-between">
-                                <a href="" id="btn-buy">Buy</a>
-                                <a href="" id="btn-cart">Add to cart</a>
+                                <a href=" {% url 'details_page' fooditems.id %} " id="btn-buy">View</a>
+                                <a href="" id="btn-cart"><i class="fa-solid fa-cart-shopping"></i></a>
                             </div>
                         </div>
                     </div>
@@ -50,6 +50,5 @@
         </div>
     </dic>
 </div>
-
 
 {% endblock content %}
