@@ -1,0 +1,53 @@
+<!-- Extend Base Page -->
+{% extends "base/base.html" %}
+
+<!-- Load Static -->
+{% load static %}
+
+<!-- Enter Title -->
+{% block title %}
+<title>Coffee Wala | Login</title>
+{% endblock title %}
+
+<!-- Content -->
+{% block content %}
+<div id="login-page">
+    <section class="login-wrapper">
+        <form autocomplete="off" onsubmit="return loginValidation()" action=" {% url 'login' %} " method="post">
+            {% csrf_token %}
+            <h2>Welcome back!</h2>
+            <h5 class="mb-4">continue to login.</h5>
+            <div>
+                <span>
+                    {% if messages %}
+                    {% for message in messages %}
+                    <p class="{{message.tags}}">{{message}}</p>
+                    {% endfor %}
+                    {% endif %}
+                </span>
+            </div>
+            <div class="mb-3">
+                <label for="sic_number">SIC Number</label>
+                <input type="text" id="sic_number" class="form-control" name="sic_number">
+                <span class="error_message" id="sic_number_error"></span>
+            </div>
+            <div class="mb-4">
+                <label for="password1">Password</label>
+                <input type="password" id="password1" class="form-control" name="password1">
+                <span class="error_message" id="password1_error"></span>
+            </div>
+            <div class="d-flex justify-content-end mb-4">
+                <a href="" class="password-reset-btn">Forgot Password ?</a>
+            </div>
+            <button class="submit-btn mb-5">Login</button>
+            <p class="d-flex justify-content-center">Dont have a account? &nbsp; <a
+                    href=" {% url 'registartion' %} ">Register here</a></p>
+        </form>
+    </section>
+</div>
+{% endblock content %}
+
+<!-- Scripts -->
+{% block script %}
+<script src=" {% static 'script/authentication.js' %} "></script>
+{% endblock script %}

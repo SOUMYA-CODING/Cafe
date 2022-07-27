@@ -1,0 +1,48 @@
+<!-- Extend Base Page -->
+{% extends "base/base.html" %}
+
+<!-- Load Static -->
+{% load static %}
+
+<!-- Enter Title -->
+{% block title %}
+<title>Coffee Wala | About</title>
+{% endblock title %}
+
+<!-- Content -->
+{% block content %}
+<!-- About Page -->
+<div id="about-page">
+    <section class="about-wrapper container">
+        <h2 class="head-design mb-4 text-center">About Us <span>About Us</span></h2>
+        <p class="p-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsum maxime sit temporibus qui
+            excepturi est et harum sint voluptatum, officia autem ex rerum vero dignissimos eaque possimus aspernatur
+            totam optio. Perferendis ad odio et officiis veniam, maxime tempore dolorum, dolore quis quia quam quas
+            voluptates veritatis quae cupiditate illum tempora accusamus commodi corporis incidunt accusantium dolorem
+            nulla error vel. Consequuntur quibusdam placeat non ratione doloribus, aperiam, dolore fugiat illo maxime
+            suscipit labore dolorem accusamus provident velit est magni vel! Adipisci tempora nisi, dignissimos
+            molestias voluptates delectus assumenda labore unde illo culpa fuga possimus saepe, eaque vel itaque, vitae
+            rem cumque! Porro exercitationem optio quo, sequi veniam fugit error corporis rem, doloremque accusantium
+            facere assumenda perferendis pariatur repellat vero tempora numquam expedita soluta aspernatur nemo
+            distinctio rerum. Laboriosam cupiditate corrupti quisquam error sed. Officiis rem eveniet impedit, pariatur
+            minus praesentium quae ipsam asperiores quaerat alias quod laudantium nobis libero ea facilis exercitationem
+            tenetur harum assumenda cupiditate. Sed molestiae, sint ut quod similique voluptatum repellendus accusamus,
+            ducimus ipsa tempora expedita quibusdam accusantium. Nesciunt sunt, excepturi, facere alias numquam eveniet
+            dolores tempore voluptate similique animi molestias delectus laudantium incidunt possimus laboriosam non
+            minima quia quidem deleniti eius? Fugit quia exercitationem sunt voluptas rem. Voluptatum ea nisi omnis
+            illum laudantium sit aliquid, porro quaerat necessitatibus, illo inventore minus. Nemo unde nulla magnam
+            quo, animi voluptatem, aliquid recusandae nesciunt dolorum alias necessitatibus reiciendis tempora,
+            doloremque officia! Minima hic vero saepe excepturi aliquam laudantium suscipit placeat soluta veniam
+            dolorem ab fugiat, debitis laboriosam libero maxime?
+        </p>
+        <div class="d-flex flex-wrap justify-content-between">
+            <img src=" {% static 'assets/img_1.jpg' %} " alt="">
+            <img src=" {% static 'assets/img_2.jpg' %} " alt="">
+            <img src=" {% static 'assets/img_3.jpg' %} " alt="">
+            <img src=" {% static 'assets/img_4.jpg' %} " alt="">
+            <img src=" {% static 'assets/img_5.jpg' %} " alt="">
+        </div>
+    </section>
+</div>
+{% endblock content %}

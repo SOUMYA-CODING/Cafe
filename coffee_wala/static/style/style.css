@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* ---- Scroll ---- */
+html {
+    scroll-behavior: smooth;
+    scroll-behavior: auto;
+}
+
+/* ------ Common ------ */
+.head-design {
+    color: #111;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 3px;
+}
+
+.head-design span {
+    color: grey;
+    opacity: 0.2;
+    font-size: 3.5rem;
+    margin-top: -3.2rem;
+}
+
+.error_message {
+    font-size: 12px;
+    color: #FF4B2B;
+}
+
+.error {
+    width: 100%;
+    background-color: #FF4B2B;
+    color: #fff;
+    padding: 10px;
+}
+
+.success {
+    width: 100%;
+    background-color: green;
+    color: #fff;
+    padding: 10px;
+}
+
+/* ------ NavBar ------ */
+.header_wrapper .navbar-brand {
+    color: #B4846C;
+}
+
+.header_wrapper .navbar-brand:hover {
+    color: #B4846C;
+}
+
+.header_wrapper .navbar-brand img {
+    width: 30px;
+}
+
+.header_wrapper .navbar-toggler img {
+    width: 40px;
+}
+
+.header_wrapper .nav-item {
+    margin-right: 10px;
+}
+
+.header_wrapper .nav-item a {
+    position: relative;
+    color: #111;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.header_wrapper .nav-item a:hover {
+    color: #B4846C;
+}
+
+.header_wrapper .login-btn {
+    padding: 0.5rem 1.6rem;
+    background-color: #B4846C;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.header_wrapper .login-btn:hover {
+    box-shadow: 0px 0px 8px 0px #B4846C;
+    color: #fff;
+}
+
+.header-scrolled {
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0px 2px 4px #fff;
+    -webkit-box-shadow: 0px 2px 4px #fff;
+}
+
+/* ------ Home Page ------ */
+#home-page {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/bg\ \(3\).jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.home-wrapper {
+    padding: 13% 0;
+}
+
+.home-wrapper p {
+    color: #FF4B2B;
+}
+
+.home-wrapper h1 {
+    font-size: 4rem;
+}
+
+.order-btn:nth-child(1) {
+    padding: 1rem 2rem;
+    color: #fff;
+    background-color: #B4846C;
+    border-radius: 0;
+    text-decoration: none;
+}
+
+.order-btn:nth-child(2) {
+    margin-left: 10px;
+    padding: 1rem 2rem;
+    color: #B4846C;
+    border-radius: 0;
+    border: 1px solid #B4846C;
+    text-decoration: none;
+}
+
+.order-btn:hover {
+    box-shadow: 0px 0px 8px 0px #B4846C;
+}
+
+/* ------ About Page ------ */
+#about-page {
+    width: 100%;
+    height: auto;
+}
+
+.about-wrapper {
+    padding: 5% 0;
+}
+
+.about-wrapper img {
+    border-radius: 10px;
+    width: 200px;
+}
+
+/* ------ Contact Page ------ */
+#contact-page {
+    width: 100%;
+    height: auto;
+}
+
+.contact-wrapper {
+    padding: 5% 0;
+}
+
+.contact-wrapper iframe {
+    width: 100%;
+}
+
+.contact-wrapper .information img {
+    height: 100px;
+}
+
+.contact-wrapper .information {
+    display: flex;
+    color: #555;
+    margin: 0.7rem 0;
+    align-items: center;
+    font-size: 16px;
+}
+
+.contact-wrapper .information p {
+    margin: auto 15px;
+}
+
+.contact-wrapper .icon {
+    color: #111;
+    width: 24px;
+    font-size: 24px;
+}
+
+.contact-wrapper .social-media {
+    padding: 2rem 0 0 0;
+}
+
+.contact-wrapper .social-media p {
+    color: #333;
+}
+
+.contact-wrapper .social-icons {
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.contact-wrapper .social-icons a {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background: #BA8B02;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 0.5rem;
+    transition: 0.3s;
+}
+
+.contact-wrapper .social-icons a:hover {
+    transform: scale(1.05);
+    color: #fff;
+}
+
+
+/* ------ Menu Page ------ */
+#menu-page {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.menu-wrapper {
+    padding: 6% 0;
+}
+
+.menu-wrapper .list-group-item {
+    text-transform: uppercase;
+}
+
+.menu-wrapper .list-group-item:hover {
+    background-color: #FF4B2B;
+    color: #fff;
+}
+
+.menu-wrapper .foodItem-card {
+    width: 20rem;
+    height: 22rem;
+    margin: 0 1.1rem 1.1rem 0;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.menu-wrapper .foodItem-card:hover {
+    box-shadow: 0px 0px 8px 0px #333;
+}
+
+.menu-wrapper .foodItem-card img {
+    width: 100%;
+    height: 60%;
+    border-radius: 10px;
+}
+
+.menu-wrapper .foodItem-card .menu-btn {
+    padding: 0.4rem 0.7rem;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.menu-wrapper .foodItem-card .menu-btn:nth-child(1) {
+    background-color: #FF4B2B;
+}
+
+.menu-wrapper .foodItem-card .menu-btn:nth-child(1):hover {
+    box-shadow: 0px 0px 8px 0px #FF4B2B;
+}
+
+.menu-wrapper .foodItem-card .menu-btn:nth-child(2) {
+    background-color: #111;
+}
+
+.menu-wrapper .foodItem-card .menu-btn:nth-child(2):hover {
+    box-shadow: 0px 0px 8px 0px #111;
+}
+
+/* ------ Food Details Page ------ */
+.food-details-page {
+    width: 100%;
+    height: 100vh;
+}
+
+.details-wrapper {
+    padding: 6% 0;
+}
+
+.details-wrapper img {
+    width: 90%;
+}
+
+.details-wrapper #btn-cart {
+    color: #fff;
+    background-color: #111;
+    padding: .5rem 1rem;
+    font-size: 1.5rem;
+}
+
+/* ------ Login Page ------ */
+#login-page {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-wrapper {
+    padding: 7% 0;
+    width: 30%;
+}
+
+.password-reset-btn {
+    padding: 0 0.6rem;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    color: #111;
+}
+
+.password-reset-btn:hover {
+    text-decoration: underline;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.6rem 3rem;
+    color: #fff;
+    background-color: #FF4B2B;
+    border: none;
+    text-transform: uppercase;
+}
+
+.submit-btn:hover {
+    box-shadow: 0px 0px 8px #FF4B2B;
+}
+
+/* ------ Registration Page ------ */
+#registartion-page {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registartion-wrapper {
+    padding: 7% 0;
+    width: 30%;
+}
+
+/* ------ Cart Page ------ */
+.cart-card{
+    width: 18rem;
+    padding: 10px;
+}

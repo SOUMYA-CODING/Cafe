@@ -1,0 +1,58 @@
+<!-- Extend Base Page -->
+{% extends "base/base.html" %}
+
+<!-- Load Static -->
+{% load static %}
+
+<!-- Enter Title -->
+{% block title %}
+<title>Coffee Wala | Cart</title>
+{% endblock title %}
+
+<!-- Content -->
+{% block content %}
+<!-- Menu page -->
+<div id="food-details-page">
+    <section class="details-wrapper container">
+        <h2 class="head-design mb-4">Cart <span>Cart</span></h2>
+
+        <div>
+            <div class="row">
+                {% if foods %}
+                <div class="col">
+                    {% for food in foods %}
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src=" {{food.photo.url}} " class="img-fluid rounded-start" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{food.name}}</h5>
+                                    <p class="card-text"> Quantity : &nbsp; {{food.quantity}}</p>
+                                    <p class="card-text"> Price : Rs &nbsp; {{food.price}}</p>
+
+                                    <a href=" {% url 'deleteItem' food.id %} " class="btn btn-danger">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <div class="col-4">
+                    <div class="price-card">
+                        <h4>Total Price</h4>
+                        <h5>Rs &nbsp; {{total_price}} </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock content %}
+
+<!-- Scripts -->
+{% block script %}
+<script src=" {% static 'script/cart.js' %} "></script>
+{% endblock script %}

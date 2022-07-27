@@ -1,0 +1,25 @@
+<!-- Extend Base Page -->
+{% extends "base/base.html" %}
+
+<!-- Load Static -->
+{% load static %}
+
+<!-- Enter Title -->
+{% block title %}
+<title>Coffee Wala | Home</title>
+{% endblock title %}
+
+<!-- Content -->
+{% block content %}
+<!-- Home Page -->
+<div id="home-page">
+    <section class="home-wrapper container">
+        <p>🍕 Easy way to order your food</p>
+        <h1 class="mb-5">Order Tasty & <br> Fresh Food <br> <span>anytime!</span></h1>
+        <div class="btn-section">
+            <a href="#" class="order-btn">Order Now</a>
+            <a href=" {% url 'menu' %} " class="order-btn">See Menu</a>
+        </div>
+    </section>
+</div>
+{% endblock content %}

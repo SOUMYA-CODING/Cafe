@@ -1,0 +1,44 @@
+<!-- Extend Base Page -->
+{% extends "base/base.html" %}
+
+<!-- Load Static -->
+{% load static %}
+
+<!-- Enter Title -->
+{% block title %}
+<title>Coffee Wala | Menu</title>
+{% endblock title %}
+
+<!-- Content -->
+{% block content %}
+<!-- Menu page -->
+<div id="menu-page">
+    <section class="menu-wrapper container">
+        <div class="row">
+            <div class="col-2">
+                <ul class="list-group">
+                    {% for categorys in category %}
+                    <li class="list-group-item">{{categorys.name}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col">
+                <div class="d-flex flex-wrap">
+                    {% for foodItems in foodItem %}
+                    <div class="foodItem-card">
+                        <img src="{{foodItems.photo.url}}" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">{{foodItems.name}}</h5>
+                            <p class="card-text">Rs. &nbsp; {{foodItems.price}}</p>
+                            <div class="d-flex">
+                                <a href="{% url 'itemDetails' foodItems.id %}" class="menu-btn">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock content %}

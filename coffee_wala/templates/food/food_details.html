@@ -1,0 +1,62 @@
+<!-- Extend Base Page -->
+{% extends "base/base.html" %}
+
+<!-- Load Static -->
+{% load static %}
+
+<!-- Enter Title -->
+{% block title %}
+<title>Coffee Wala | Details</title>
+{% endblock title %}
+
+<!-- Content -->
+{% block content %}
+<!-- Menu page -->
+<div id="food-details-page">
+    <section class="details-wrapper container">
+        <div class="row">
+            <div class="col">
+                <img src="{{itemDetails.photo.url}}" alt="">
+            </div>
+            <div class="col">
+                <h2 class="head-design mb-4 ">{{itemDetails.name}} <span>{{itemDetails.name}}</span></h2>
+                <h4 class="mb-4">{{itemDetails.description}}</h4>
+                <h5 class="mb-5">Quantity : &nbsp; {{itemDetails.secondary_description}}</h5>
+                <div class="d-flex justify-content-between align-items-center align-self-center">
+                    <h5>Rs. &nbsp; {{itemDetails.price}}</h5>
+                    {% if itemDetails.availability %}
+                    {% if user.is_authenticated %}
+
+                    <form action=" {% url 'addtoCart' %} " class="d-flex" method="post">
+                        {% csrf_token %}
+                        <div>
+                            <input type="text" class="form-control" name="food_item_id" value="{{ itemDetails.id }}"
+                                style="display: none;">
+                            <div class="input-group mb-3">
+                                <button class="btn btn-outline-secondary" type="button" onclick="decrement()">-</button>
+                                <input type="number" class="form-control quantity text-center" id="quantity" value="1"
+                                    readonly name="quantity">
+                                <button class="btn btn-outline-secondary" type="button" onclick="increment()">+</button>
+                            </div>
+                        </div>
+                        <button class="btn btn-dark ms-1"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </form>
+
+                    {% else %}
+                    <a href=" {% url 'login' %} " class="btn btn-danger">Login to buy</i></a>
+                    {% endif %}
+                    {% else %}
+                    <h5 class="text-danger">Not Availabe</h5>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock content %}
+
+<!-- Scripts -->
+{% block script %}
+<script src=" {% static 'script/cart.js' %} "></script>
+{% endblock script %}
