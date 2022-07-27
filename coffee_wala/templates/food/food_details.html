@@ -22,7 +22,7 @@
                 <h2 class="head-design mb-4 ">{{itemDetails.name}} <span>{{itemDetails.name}}</span></h2>
                 <h4 class="mb-4">{{itemDetails.description}}</h4>
                 <h5 class="mb-5">Quantity : &nbsp; {{itemDetails.secondary_description}}</h5>
-                <div class="d-flex justify-content-between align-items-center align-self-center">
+                <div class="d-flex justify-content-between ">
                     <h5>Rs. &nbsp; {{itemDetails.price}}</h5>
                     {% if itemDetails.availability %}
                     {% if user.is_authenticated %}
@@ -39,7 +39,7 @@
                                 <button class="btn btn-outline-secondary" type="button" onclick="increment()">+</button>
                             </div>
                         </div>
-                        <button class="btn btn-dark ms-1"><i class="fa-solid fa-cart-shopping"></i></button>
+                        <button class="cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
                     </form>
 
                     {% else %}
