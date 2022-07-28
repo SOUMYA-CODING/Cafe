@@ -14,7 +14,7 @@
 <!-- Menu page -->
 <div id="food-details-page">
     <section class="details-wrapper container">
-        <h2 class="head-design mb-4">Cart <span>Cart</span></h2>
+        <h2 class="head-design mb-4">My Cart <span>My Cart</span></h2>
 
         <div>
             <div class="row">
@@ -30,7 +30,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">{{food.name}}</h5>
                                     <p class="card-text"> Quantity : &nbsp; {{food.quantity}}</p>
-                                    <p class="card-text"> Price : Rs &nbsp; {{food.price}}</p>
+                                    <p class="card-text"> Price : Rs &nbsp; {{food.price}}/-</p>
 
                                     <div class="d-flex justify-content-end">
                                         <a href=" {% url 'deleteItem' food.id %} " class="btn btn-danger">Delete</a>
