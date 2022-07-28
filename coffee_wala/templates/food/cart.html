@@ -43,6 +43,9 @@
                 </div>
                 {% endif %}
                 <div class="col-5">
+                    {% if total_price == 0 %}
+                    <h2>Cart is Empty</h2>
+                    {% else %}
                     <div class="price-card">
                         <h4>Total Price</h4>
                         <h5>Rs &nbsp; {{total_price}} </h5>
@@ -50,6 +53,7 @@
                             <a href="" class="btn btn-primary">Proceed to checkout</a>
                         </div>
                     </div>
+                    {% endif %}
                 </div>
             </div>
         </div>

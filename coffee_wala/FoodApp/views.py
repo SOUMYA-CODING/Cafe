@@ -45,7 +45,7 @@ def AddCart(request):
 def CartDetails(request):
     foods = request.session.get("food_items")
     items = []
-    total_price = 0
+    price = 0
     if foods:
         for id, quantity in foods.items():
             food = FoodItem.objects.get(id=id)
