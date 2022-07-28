@@ -21,18 +21,20 @@
                 {% if foods %}
                 <div class="col">
                     {% for food in foods %}
-                    <div class="card mb-3">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src=" {{food.photo.url}} " class="img-fluid rounded-start" alt="">
+                    <div class="card cart-card mb-3">
+                        <div class="row">
+                            <div class="col">
+                                <img src=" {{food.photo.url}} " class="img-fluid" alt="">
                             </div>
-                            <div class="col-md-8">
+                            <div class="col">
                                 <div class="card-body">
                                     <h5 class="card-title">{{food.name}}</h5>
                                     <p class="card-text"> Quantity : &nbsp; {{food.quantity}}</p>
                                     <p class="card-text"> Price : Rs &nbsp; {{food.price}}</p>
 
-                                    <a href=" {% url 'deleteItem' food.id %} " class="btn btn-danger">Delete</a>
+                                    <div class="d-flex justify-content-end">
+                                        <a href=" {% url 'deleteItem' food.id %} " class="btn btn-danger">Delete</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -40,10 +42,13 @@
                     {% endfor %}
                 </div>
                 {% endif %}
-                <div class="col-4">
+                <div class="col-5">
                     <div class="price-card">
                         <h4>Total Price</h4>
                         <h5>Rs &nbsp; {{total_price}} </h5>
+                        <div class="d-flex justify-content-end">
+                            <a href="" class="btn btn-primary">Proceed to checkout</a>
+                        </div>
                     </div>
                 </div>
             </div>
