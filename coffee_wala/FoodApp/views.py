@@ -1,8 +1,7 @@
-from unicodedata import category
 from django.shortcuts import render, redirect
-from matplotlib.style import context
-
 from . models import Category, FoodItem
+from random import randint
+from django.core.mail import send_mail
 
 
 # Menu Page
@@ -76,4 +75,15 @@ def DeleteCardItem(request, id):
 
 # OTP Page
 def OtpPage(request):
-    return render(request,'food/check_out.html')
+    otp = randint(111111, 999999)
+    send_mail(
+        "OTP from Coffe Wala",
+        f"Your OTP to order food from Coffee Wala i s {otp}",
+        "soumyaprakashsahu2001@gmail.com",
+        [request.user.email,],
+        fail_silently=False,
+    )
+
+    request.session["OTP"] = otp
+
+    return render(request, 'food/check_out.html')
