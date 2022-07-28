@@ -11,4 +11,5 @@ urlpatterns = [
     path('deleteItem/<str:id>/', views.DeleteCardItem, name="deleteItem"),
     path('checkOut/', views.OtpPage, name="checkOut"),
     path('placeorder/', views.PlaceOrder, name="placeorder"),
+    path('orders/', views.OrdersDetails, name="orders"),
 ]

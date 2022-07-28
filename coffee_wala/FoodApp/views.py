@@ -1,7 +1,7 @@
 from email import message
 import django
 from django.shortcuts import render, redirect
-from . models import Category, FoodItem
+from . models import Category, FoodItem, Orders
 from random import randint
 from django.core.mail import send_mail
 from django.contrib import messages
@@ -98,6 +98,33 @@ def PlaceOrder(request):
         if request.session.get("OTP") != int(otp):
             messages.error(request, "Invalid OTP")
             return redirect("checkOut")
-       
+        else:
+            foods = request.session.get("food_items")
+            if foods:
+                order_details = ""
+                total_price = 0
+                for id, quantity in foods.items():
+                    food = FoodItem.objects.get(id=id)
+                    price = food.price * int(quantity)
+                    total_price += price
+                    order_details += f"{food.name} x {quantity}"
 
-    return render(request, 'food/order.html')
+                order = Orders(
+                    user=request.user, order_details=order_details, total_price=total_price)
+
+                order.save()
+
+                del request.session["food_items"]
+                del request.session["OTP"]
+
+    return redirect('orders')
+
+
+# Orders Details
+def OrdersDetails(request):
+    orderDetails = Orders.objects.filter(user=request.user).order_by('-id')
+    context = {
+        'details': orderDetails
+    }
+
+    return render(request, 'food/order.html', context)
