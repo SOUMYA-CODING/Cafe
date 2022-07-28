@@ -9,4 +9,5 @@ urlpatterns = [
     path('add_to_cart/', views.AddCart, name="addtoCart"),
     path('cartDetails/', views.CartDetails, name="cartDetails"),
     path('deleteItem/<str:id>/', views.DeleteCardItem, name="deleteItem"),
+    path('checkOut/', views.OtpPage, name="checkOut"),
 ]

@@ -1,0 +1,47 @@
+<!-- Extend Base Page -->
+{% extends "base/base.html" %}
+
+<!-- Load Static -->
+{% load static %}
+
+<!-- Enter Title -->
+{% block title %}
+<title>Coffee Wala | Cart</title>
+{% endblock title %}
+
+<!-- Content -->
+{% block content %}
+<!-- Menu page -->
+<div id="food-details-page">
+    <section class="details-wrapper container">
+        <h2 class="head-design mb-4">Check Out <span>Check Out</span></h2>
+
+        <div class="otp-form">
+            <form autocomplete="off" onsubmit="return loginValidation()" action=" {% url 'login' %} " method="post">
+                {% csrf_token %}
+                <div>
+                    <span>
+                        {% if messages %}
+                        {% for message in messages %}
+                        <p class="{{message.tags}}">{{message}}</p>
+                        {% endfor %}
+                        {% endif %}
+                    </span>
+                </div>
+                <div class="mb-3">
+                    <label for="otp">A OTP is send to your email id </label>
+                    <input type="text" id="otp" class="form-control" name="otp" placeholder="Please enter otp" required>
+                    <span class="error_message" id="otp_error"></span>
+                </div>
+
+                <button class="submit-btn mb-5">Verify</button>
+            </form>
+        </div>
+    </section>
+</div>
+{% endblock content %}
+
+<!-- Scripts -->
+{% block script %}
+<script src=" {% static 'script/authentication.js' %} "></script>
+{% endblock script %}

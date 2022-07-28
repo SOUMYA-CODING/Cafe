@@ -65,10 +65,15 @@ def CartDetails(request):
     return render(request, 'food/cart.html', context)
 
 
-# Delete The
+# Delete the item
 def DeleteCardItem(request, id):
     foods = request.session.get("food_items")
     del foods[id]
     request.session["food_items"] = foods
 
     return redirect('cartDetails')
+
+
+# OTP Page
+def OtpPage(request):
+    return render(request,'food/check_out.html')
