@@ -1,5 +1,4 @@
 from django.db import models
-from matplotlib import category
 from django.contrib.auth.models import User
 
 

@@ -47,11 +47,12 @@ def AddCart(request):
 def CartDetails(request):
     foods = request.session.get("food_items")
     items = []
-    price = 0
+    total_price = 0
     if foods:
         for id, quantity in foods.items():
             food = FoodItem.objects.get(id=id)
             price = int(quantity) * int(food.price)
+            total_price += price
             items.append({
                 "id": id,
                 "name": food.name,
@@ -62,7 +63,7 @@ def CartDetails(request):
 
     context = {
         "foods": items,
-        "total_price": price,
+        "total_price": total_price,
     }
     return render(request, 'food/cart.html', context)
 
@@ -107,7 +108,7 @@ def PlaceOrder(request):
                     food = FoodItem.objects.get(id=id)
                     price = food.price * int(quantity)
                     total_price += price
-                    order_details += f"{food.name} x {quantity}"
+                    order_details += f"{food.name} x {quantity} "
 
                 order = Orders(
                     user=request.user, order_details=order_details, total_price=total_price)
