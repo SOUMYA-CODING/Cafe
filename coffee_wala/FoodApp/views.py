@@ -1,7 +1,10 @@
+from email import message
+import django
 from django.shortcuts import render, redirect
 from . models import Category, FoodItem
 from random import randint
 from django.core.mail import send_mail
+from django.contrib import messages
 
 
 # Menu Page
@@ -75,15 +78,25 @@ def DeleteCardItem(request, id):
 
 # OTP Page
 def OtpPage(request):
-    otp = randint(111111, 999999)
-    send_mail(
-        "OTP from Coffe Wala",
-        f"Your OTP to order food from Coffee Wala i s {otp}",
-        "soumyaprakashsahu2001@gmail.com",
-        [request.user.email,],
-        fail_silently=False,
-    )
-
-    request.session["OTP"] = otp
-
+    if not request.session.get("OTP"):
+        otp = randint(111111, 999999)
+        send_mail(
+            "OTP from Coffe Wala",
+            f"Your OTP to order food from Coffee Wala i s {otp}",
+            "soumyaprakashsahu2001@gmail.com",
+            [request.user.email, ],
+            fail_silently=False,
+        )
+        request.session["OTP"] = otp
     return render(request, 'food/check_out.html')
+
+
+# Place Order
+def PlaceOrder(request):
+    if request.method == "POST":
+        otp = request.POST.get("otp")
+        if request.session.get("OTP") != int(otp):
+            messages.error(request, "Invalid OTP")
+            return redirect("checkOut")
+
+    return render(request, 'food/order.html')

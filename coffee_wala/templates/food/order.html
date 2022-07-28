@@ -1,0 +1,27 @@
+<!-- Extend Base Page -->
+{% extends "base/base.html" %}
+
+<!-- Load Static -->
+{% load static %}
+
+<!-- Enter Title -->
+{% block title %}
+<title>Coffee Wala | Check Out</title>
+{% endblock title %}
+
+<!-- Content -->
+{% block content %}
+<!-- Menu page -->
+<div id="food-details-page">
+    <section class="details-wrapper container">
+        <h2 class="head-design mb-4">Your Orders <span>Your Orders</span></h2>
+
+        
+    </section>
+</div>
+{% endblock content %}
+
+<!-- Scripts -->
+{% block script %}
+<script src=" {% static 'script/authentication.js' %} "></script>
+{% endblock script %}

@@ -6,7 +6,7 @@
 
 <!-- Enter Title -->
 {% block title %}
-<title>Coffee Wala | Cart</title>
+<title>Coffee Wala | Check Out</title>
 {% endblock title %}
 
 <!-- Content -->
@@ -17,7 +17,7 @@
         <h2 class="head-design mb-4">Check Out <span>Check Out</span></h2>
 
         <div class="otp-form">
-            <form autocomplete="off" onsubmit="return loginValidation()" action=" {% url 'login' %} " method="post">
+            <form autocomplete="off" action=" {% url 'placeorder' %} " method="post">
                 {% csrf_token %}
                 <div>
                     <span>
@@ -43,5 +43,5 @@
 
 <!-- Scripts -->
 {% block script %}
-<script src=" {% static 'script/authentication.js' %} "></script>
+
 {% endblock script %}
