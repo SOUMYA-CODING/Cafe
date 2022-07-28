@@ -98,5 +98,6 @@ def PlaceOrder(request):
         if request.session.get("OTP") != int(otp):
             messages.error(request, "Invalid OTP")
             return redirect("checkOut")
+       
 
     return render(request, 'food/order.html')
