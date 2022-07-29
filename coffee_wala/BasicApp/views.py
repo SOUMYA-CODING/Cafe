@@ -1,5 +1,7 @@
+from unicodedata import name
 from django.shortcuts import render
 from FoodApp.models import FoodItem
+from django.db.models import Q
 
 
 # Index Page
@@ -27,11 +29,10 @@ def Search(request):
 
 
 def SearchBtn(request):
-    if request.method == "POST":
-        food_name = request.POST.get("searchinput")
-        foodItems = FoodItem.objects.filter(food_name=FoodItem.name)
-
+    if request.method == "GET":
+        food_name = request.GET.get("searchinput")
+        foods = FoodItem.objects.filter(Q(name__icontains=food_name))
         context = {
-            'foodItems': foodItems
+            'food': foods,
         }
     return render(request, 'basicpages/search.html', context)
