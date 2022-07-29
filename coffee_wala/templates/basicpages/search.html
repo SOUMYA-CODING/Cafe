@@ -1,0 +1,35 @@
+<!-- Extend Base Page -->
+{% extends "base/base.html" %}
+
+<!-- Load Static -->
+{% load static %}
+
+<!-- Enter Title -->
+{% block title %}
+<title>Coffee Wala | Search</title>
+{% endblock title %}
+
+<!-- Content -->
+{% block content %}
+<!-- Home Page -->
+<div id="search-page">
+    <section class="search-wrapper container">
+        <div class="input-group mb-3 search-bar">
+            <input type="text" class="form-control" placeholder="Search..." name="searchinput">
+            <form action=" {% url 'searchbar' %} " method="post">
+                {% csrf_token %}
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+
+        <div class="search-result">
+            {% for foodItem in foodItems %}
+            <h2>{{foodItem.name}}</h2>
+            {% endfor %}
+        </div>
+    </section>
+
+</div>
+
+{% endblock content %}
