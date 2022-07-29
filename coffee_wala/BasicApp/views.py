@@ -1,10 +1,14 @@
 from django.shortcuts import render
-from requests import request
+from FoodApp.models import FoodItem
 
 
 # Index Page
 def Index(request):
-    return render(request, 'basicpages/index.html')
+    foodItems = FoodItem.objects.all()
+    context = {
+        'foodItems': foodItems,
+    }
+    return render(request, 'basicpages/index.html', context)
 
 
 # About Page

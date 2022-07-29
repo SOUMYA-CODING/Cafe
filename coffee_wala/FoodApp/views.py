@@ -1,5 +1,3 @@
-from email import message
-import django
 from django.shortcuts import render, redirect
 from . models import Category, FoodItem, Orders
 from random import randint

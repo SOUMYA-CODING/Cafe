@@ -22,4 +22,12 @@
         </div>
     </section>
 </div>
+
+<div id="banner">
+    <div class="banner-wrapper container">
+        {% for foodItem in foodItems %}
+        <div>{{foodItem.name}}</div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock content %}

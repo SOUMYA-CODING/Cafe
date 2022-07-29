@@ -428,3 +428,9 @@ html {
 .order-body {
     padding: 10px;
 }
+
+/* ------ Banner Page ------ */
+#banner {
+    width: 100%;
+    height: 100vh;
+}
