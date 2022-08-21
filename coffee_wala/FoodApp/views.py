@@ -116,6 +116,8 @@ def PlaceOrder(request):
                 del request.session["food_items"]
                 del request.session["OTP"]
 
+                print("Success")
+
     return redirect('orders')
 
 
