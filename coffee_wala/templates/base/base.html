@@ -54,13 +54,13 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                         </li>
-                        <li class="nav-item search-box">
+                        <!-- <li class="nav-item search-box">
                             <form action="" method="get" class="nav-link" autocomplete="off">
                                 <input type="text" class="search-input" placeholder="Search.." name="query">
                                 <a class="search-btn" href="{% url 'search' %}"><i
                                         class="fa-solid fa-magnifying-glass"></i></a>
                             </form>
-                        </li>
+                        </li> -->
                         {% if user.is_authenticated %}
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"

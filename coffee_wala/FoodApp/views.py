@@ -82,7 +82,7 @@ def OtpPage(request):
         send_mail(
             "OTP from Coffe Wala",
             f"Your OTP to order food from Coffee Wala i s {otp}",
-            "soumyaprakashsahu2001@gmail.com",
+            "samsahu2022@gmail.com",
             [request.user.email, ],
             fail_silently=False,
         )
